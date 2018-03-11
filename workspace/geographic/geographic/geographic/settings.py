@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Agrego mi app de countries para que me renderize
+    'countries.apps.CountriesConfig'
 ]
 
 MIDDLEWARE = [
