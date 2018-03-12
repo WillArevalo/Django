@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>tags | Will Page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	
+</head>
+<body>
+	<div class="container-fluid" style="background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/corporate-grey-low-poly-geometric-motion-background-video-animation-hd-1920x1080_nypfik1eg__F0008.png');background-attachment: fixed;">
+		<h1 class="display-4 text-center">Template tag y Template filter, filtros y etiquetas en Django</h1>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+		    <div class="col-sm">
+		    	<!--El sgte contenido solo se ve sobre el codigo de django-->
+		    	{% comment "optional note" %}
+		    	    columna-1
+		    	{% endcomment %}
+		    	{% for country in countries %}
+		    		<p class="text-center">{{country}}<p>
+		    	{% endfor %}
+		    </div>
+		    <div class="col-sm">
+		    	<ul class="list-group">
+		    	{% for country in countries %}
+				  <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+				    {{country.name|title}}
+				    <span class="badge badge-primary badge-pill">{{country.code}}</span>
+				  </li>
+				  {% if country.name == 'colombia' %}
+				      <p>Colombia tierra querida</p>
+				  {% endif %}
+		    	{% endfor %}
+				</ul>
+		    </div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+		    <div class="col-sm">
+		    	<div class="container">
+		    		<p>{% lorem %}</p>
+		    	</div>
+		    </div>
+		    <div class="col-sm">
+		    	<p class="lead text-center"><abbr title="Date server" class="initialism">Fecha actual </abbr>{% now "d-m-Y" %}</p>
+		    	<p>
+		    		{{"PRUEBA"|capfirst}}
+		    	</p>
+		    	<p>
+		    		{% if population|divisibleby:"2" %}
+						se cumple que population {{population}} es divisible por 2
+		    		{% endif %}
+		    	</p>
+		    </div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+		    <div class="col-sm">
+		    	<!--El sgte contenido solo se ve sobre el codigo de django-->
+		    	{% comment "optional note" %}
+		    	    columna-1
+		    	{% endcomment %}
+		    	{% for country in countries %}
+		    		<p class="text-center">{{country}}<p>
+		    	{% endfor %}
+		    </div>
+		    <div class="col-sm">
+		    	<ul class="list-group">
+		    	{% for country in countries %}
+				  <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+				    {{country.name|title}}
+				    <span class="badge badge-primary badge-pill">{{country.code}}</span>
+				  </li>
+		    	{% endfor %}
+				</ul>
+		    </div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+		    <div class="col-sm">
+		    	<!--El sgte contenido solo se ve sobre el codigo de django-->
+		    	{% comment "optional note" %}
+		    	    columna-1
+		    	{% endcomment %}
+		    	{% for country in countries %}
+		    		<p class="text-center">{{country}}<p>
+		    	{% endfor %}
+		    </div>
+		    <div class="col-sm">
+		    	<ul class="list-group">
+		    	{% for country in countries %}
+				  <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+				    {{country.name|title}}
+				    <span class="badge badge-primary badge-pill">{{country.code}}</span>
+				  </li>
+		    	{% endfor %}
+				</ul>
+		    </div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+		    <div class="col-sm">
+		    	<!--El sgte contenido solo se ve sobre el codigo de django-->
+		    	{% comment "optional note" %}
+		    	    columna-1
+		    	{% endcomment %}
+		    	{% for country in countries %}
+		    		<p class="text-center">{{country}}<p>
+		    	{% endfor %}
+		    </div>
+		    <div class="col-sm">
+		    	<ul class="list-group">
+		    	{% for country in countries %}
+				  <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+				    {{country.name|title}}
+				    <span class="badge badge-primary badge-pill">{{country.code}}</span>
+				  </li>
+		    	{% endfor %}
+				</ul>
+		    </div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<!--Todos los countries que existen-->
+	</div>
+	<!--JS CDN Bootstrap-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

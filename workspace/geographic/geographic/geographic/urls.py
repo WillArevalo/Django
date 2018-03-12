@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 #Importamos home
-from countries.views import HomeView
+from countries.views import HomeView, TagsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #En las urls de la app principal le diremos que procese nuestra vista de la mini-app
-    path('', HomeView.as_view())
+    path('', HomeView.as_view()),
+    path('tags/', TagsView.as_view())
 ]
