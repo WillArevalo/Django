@@ -7,20 +7,7 @@ from django.views.generic import TemplateView
 # definimos una funcion para que de devuelva una respuesta HTTP
 class HomeView(TemplateView):
 	template_name = 'countries/home.html'
-	#forma de pasar inforacion a traves de los templatesviews
-	def get_context_data(self, *args, **kwargs):
-		colombia = {'name': 'colombia', 'code':'CO'}
-		usa = {'name': 'estados unidos', 'code':'USA'}
-		mexico = {'name': 'mexico', 'code': 'MX'}
-		countries = [colombia, usa, mexico]
-		return {'countries': countries}
 
 class TagsView(TemplateView):
 	template_name = 'countries/tags.html'
-	def get_context_data(self, *args, **kwargs):
-		colombia = {'name': 'colombia', 'code':'CO'}
-		usa = {'name': 'estados unidos', 'code':'USA'}
-		mexico = {'name': 'mexico', 'code': 'MX'}
-		countries = [colombia, usa, mexico]
-		population = 10
-		return {'countries': countries, 'population': population}
+	
