@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Will Page</title>	
+	<title>Will Page</title>
+	<style>
+		table, th, td {
+		    border: 1px solid black;
+		    border-collapse: collapse;
+		}
+		th, td {
+		    padding: 5px;
+		    text-align: left;    
+		}
+	</style>	
 </head>
 <body>
-	<p>Welcome to my site in Django</p>
+	<p>Welcome to my site</p>
+	<br>
+	<br>
+	<br>
+	<!--Todos los countries que existen-->
+	<table style="width:50%">
+	  <tr>
+	    <th>Country</th>
+	    <th>Code</th>
+	  </tr>
+	  <!--Con un pipeline(|) y title me hace capitalize-->
+		{% for country in countries %}
+		  <tr>
+		  	{% if country.name == 'colombia'%}
+		    <td><b>{{country.name|title}}</b></td>
+		    {%else%}
+		    <td>{{country.name|title}}</td>
+		    {% endif %}
+		    <td>{{country.code}}</td>
+		  </tr>
+		{% endfor %}
+	</table>
 </body>
 </html>
