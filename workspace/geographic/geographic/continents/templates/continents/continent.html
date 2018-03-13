@@ -1,0 +1,21 @@
+<table class="table table-striped table-hover table-sm ">
+	<thead class="thead-dark">
+	  <tr>
+	    <th scope="col">Continent</th>
+	    <th scope="col">Translate</th>
+	    <th scope="col">Color</th>
+	  </tr>
+	</thead>
+  <!--Con un pipeline(|) y title me hace capitalize-->
+	{% for continent in continents %}
+	  <tr>
+	  	{% if continent.name == 'america'%}
+	    <td><b>{{continent.name|title}}</b></td>
+	    {%else%}
+	    <td>{{continent.name|title}}</td>
+	    {% endif %}
+	    <td>{{continent.translate|title}}</td>
+	    <td><b style="color:{{continent.color}};">{{continent.color}}</b></td>
+	  </tr>
+	{% endfor %}
+</table>

@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #Agrego mi app de countries para que me renderize
-    'countries.apps.CountriesConfig'
+    'countries.apps.CountriesConfig',
+    #Agrego mi app de continents para que me renderize
+    'continents.apps.ContinentsConfig'
 ]
 
 MIDDLEWARE = [
@@ -65,7 +67,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 #Agrego un nuevo contexto
-                'countries.context_processor.countries_data'
+                'countries.context_processor.countries_data',
+                #Agrego un nuevo contexto
+                'continents.context_processor.continents_data'
             ],
         },
     },
