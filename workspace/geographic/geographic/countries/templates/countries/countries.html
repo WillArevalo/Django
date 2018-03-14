@@ -3,6 +3,7 @@
 	  <tr>
 	    <th scope="col">Country</th>
 	    <th scope="col">Code</th>
+	    <th scope="col">Id</th>
 	  </tr>
 	</thead>
   <!--Con un pipeline(|) y title me hace capitalize-->
@@ -13,7 +14,8 @@
 	    {%else%}
 	    <td>{{country.name|title}}</td>
 	    {% endif %}
-	    <td>{{country.code}}</td>
+	    <td><a href="{% url 'country_detail' code=country.code %}">{{country.code}}</a></td>
+	    <td><a href="{{country.detail_url}}">{{country.id}}</a></td>
 	  </tr>
 	{% endfor %}
 </table>

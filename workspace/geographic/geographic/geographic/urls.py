@@ -27,10 +27,11 @@ from continents.views import ContinentsView
 urlpatterns = [
     path('admin/', admin.site.urls),
     #En las urls de la app principal le diremos que procese nuestra vista de la mini-app
-    path('', HomeView.as_view()),
-    path('tags/', TagsView.as_view()),
-    path('continents/', ContinentsView.as_view()),
+    # Si utilizo name puede hacer referencia de los templates
+    path('', HomeView.as_view(), name="home"),
+    path('tags/', TagsView.as_view(), name="tags"),
+    path('continents/', ContinentsView.as_view(), name="continents_home"),
     #Valido que es un entero
-    path('countries/<int:id>/', CountryDetailIdView.as_view()),
-    path('countries/<code>/', CountryDetailView.as_view()),
+    path('countries/<int:id>/', CountryDetailIdView.as_view(), name="country_id_detail"),
+    path('countries/<code>/', CountryDetailView.as_view(), name="country_detail"),
 ]
