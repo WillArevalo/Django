@@ -14,5 +14,6 @@ class Country(models.Model):
 	name = models.CharField(max_length=255)
 	#Si queremos limitar a una cierta tipa de opcione que utilice los codigos de arriba
 	code = models.CharField(max_length=3, choices=CODES_CHOICES)
-
-	
+	#Genero un nuevo campo para hacer la relacione entre continents y countries
+	continent = models.ForeignKey('continents.Continent', on_delete=models.CASCADE)
+	#Borrado en modo casacada para que cuando se borre un continent se borren todos los paises asociados
