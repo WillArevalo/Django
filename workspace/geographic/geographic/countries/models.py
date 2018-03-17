@@ -17,3 +17,7 @@ class Country(models.Model):
 	#Genero un nuevo campo para hacer la relacione entre continents y countries
 	continent = models.ForeignKey('continents.Continent', on_delete=models.CASCADE)
 	#Borrado en modo casacada para que cuando se borre un continent se borren todos los paises asociados
+
+	#funcion para mostrar el nombre del objeto en vez de un nombre generico
+	def __str__(self):
+		return self.name
