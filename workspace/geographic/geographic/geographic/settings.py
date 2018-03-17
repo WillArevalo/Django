@@ -72,8 +72,6 @@ TEMPLATES = [
                 'countries.context_processor.countries_data',
                 #Agrego un nuevo contexto
                 'continents.context_processor.continents_data',
-                #Agrego un nuevo contexto
-                'people.context_processor.people_data',
 
             ],
         },

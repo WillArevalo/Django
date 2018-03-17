@@ -21,7 +21,7 @@ from countries.views import (
     HomeView, 
     TagsView, 
     CountryDetailView,
-    CountryDetailIdView
+    CountryDetailIdView,
     )
 from continents.views import ContinentsView
 
