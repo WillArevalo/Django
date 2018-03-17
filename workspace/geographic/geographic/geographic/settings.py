@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     #Agrego mi app de countries para que me renderize
     'countries.apps.CountriesConfig',
     #Agrego mi app de continents para que me renderize
-    'continents.apps.ContinentsConfig'
+    'continents.apps.ContinentsConfig',
+    #Agrego mi app de people para que me renderize
+    'people.apps.PeopleConfig',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +71,10 @@ TEMPLATES = [
                 #Agrego un nuevo contexto
                 'countries.context_processor.countries_data',
                 #Agrego un nuevo contexto
-                'continents.context_processor.continents_data'
+                'continents.context_processor.continents_data',
+                #Agrego un nuevo contexto
+                'people.context_processor.people_data',
+
             ],
         },
     },
