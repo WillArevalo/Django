@@ -23,7 +23,7 @@ from countries.views import (
     CountryDetailView,
     CountryDetailIdView,
     )
-from continents.views import ContinentsView
+from continents.views import ContinentsView, ContinentDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),

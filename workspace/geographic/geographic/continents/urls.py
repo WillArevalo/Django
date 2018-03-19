@@ -15,11 +15,12 @@ Including another URLconf
 """
 
 from django.urls import path
-from continents.views import ContinentsView
+from continents.views import ContinentsView, ContinentDetailView
 
 #para que funcione el namespace debemos especificar el nombre de la app
 app_name = 'continents'
 
 urlpatterns = [
     path('', ContinentsView.as_view(), name="home"),
+    path('<int:pk>/', ContinentDetailView.as_view(), name="detail"),
 ]

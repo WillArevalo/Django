@@ -1,0 +1,25 @@
+{% extends "countries/base.html" %}
+{% block title %}
+    continent-{{object.name}}
+{% endblock title %}
+{% block content %}
+	<h1 class="text-center">Name:{{object.name|title}}</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h2 class="text-left">Translate: <span class="badge badge-secondary">{{object.translate}}</span></h2>
+			</div>
+			<div class="col">
+				<h2 class="text-center">Color: <span class="badge badge-secondary" style="color:{{object.color}};">{{object.color}}</span></h2>
+			</div>
+			<div class="col">
+				<h2>Countries:</h2>
+				<ul>
+					{% for country in object.country_set.all %}
+						<li>{{country.name}}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

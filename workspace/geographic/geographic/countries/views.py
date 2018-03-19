@@ -28,7 +28,7 @@ class CountryDetailView(TemplateView):
 #class CountryDetailIdView(DetailView):
 #	template_name = 'countries/country_id_detail.html'
 #	model = Country
-#Algo que aclarar es que se debe modificar ya que lelga un object y no un country el include de el template asi:
+#Algo que aclarar es que se debe modificar ya que llega un object y no un country el include de el template asi:
 #	{% include 'countries/country.html' with country=object %}
 #Tambien en la url de countries que en vez de que el parametro que se pase se llame id ahora se llame 'pk' o 'slug'
 class CountryDetailIdView(TemplateView):
