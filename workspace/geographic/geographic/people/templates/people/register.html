@@ -1,0 +1,10 @@
+{% extends "countries/base.html" %}
+
+{% block title %}Form{% endblock title %}
+{% block content %}
+    <form class="" action="." method="post">
+    	{% csrf_token %}
+    	{{form}}
+    	<button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+{% endblock content %}

@@ -35,4 +35,5 @@ urlpatterns = [
     #Este namespace funciona solo al nivel interno no se refelja en la url, sirve para identificar espacio de trabajo
     path('continents/', include("continents.urls", namespace="continents")),
     path('countries/', include("countries.urls")),
+    path('people/', include("people.urls")),
 ]
