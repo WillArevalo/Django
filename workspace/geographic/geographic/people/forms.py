@@ -11,4 +11,4 @@ class RegisterForm(forms.Form):
 	#Many to Many
 	nacionality = forms.ModelMultipleChoiceField(queryset=Country.objects.all())
 	#One to Many
-	father = forms.ModelChoiceField(queryset=Person.objects.all())
+	father = forms.ModelChoiceField(required=False,queryset=Person.objects.all())
