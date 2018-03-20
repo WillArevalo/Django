@@ -4,7 +4,7 @@
 {% block content %}
     <form class="" action="." method="post">
     	{% csrf_token %}
-    	{{form}}
+    	{{form.as_ul}}
     	<button type="submit" class="btn btn-primary">Enviar</button>
     </form>
 {% endblock content %}
