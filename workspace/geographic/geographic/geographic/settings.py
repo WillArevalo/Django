@@ -46,9 +46,12 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'people.middleware.SecretMiddleware',
+    #El orden en que van los middlewares afectan
+    #'people.middleware.SecretMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    #nuestro middleware va aca por que antes no existen los sessions
+    'people.middleware.ABMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
