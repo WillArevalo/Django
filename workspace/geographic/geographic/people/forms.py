@@ -12,3 +12,13 @@ class RegisterForm(forms.Form):
 	nacionality = forms.ModelMultipleChoiceField(queryset=Country.objects.all())
 	#One to Many
 	father = forms.ModelChoiceField(required=False,queryset=Person.objects.all())
+
+#Formulario semiautomatico
+class RegisterFormModel(forms.ModelForm):
+	# Si definieramos aqui model lo tomaria como una variable y no como un modelo,
+	# por eso lo hacemos desde una clase
+
+	# El modelFrom determina si un campo es obligatorio por el atributo blank en el modelo, mas no el atributo null
+	class Meta:
+		model = Person
+		fields = ['first_name','nacionality', 'father']
