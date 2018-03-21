@@ -21,12 +21,14 @@ from countries.views import (
     CountryDetailView,
     CountryDetailIdView,
     CountrySearchView,
+    CreateCountryView,
     )
 
 urlpatterns = [
     #En las urls de la app principal le diremos que procese nuestra vista de la mini-app
     # Si utilizo name puede hacer referencia de los templates
     #Valido que es un entero
+    path('register/', CreateCountryView.as_view(), name="register"),
     path('search/<query>/', CountrySearchView.as_view(), name="country_search"),
     path('<int:id>/', CountryDetailIdView.as_view(), name="country_id_detail"),
     path('<code>/', CountryDetailView.as_view(), name="country_detail"),

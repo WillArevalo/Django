@@ -11,10 +11,13 @@ class ActiveManager(models.Manager):
 class Country(models.Model):
 
 	CODES_CHOICES = (
-		('colombia', 'CO'),
-		('mexico', 'MX'),
-		('estados unidos', 'USA'),
-		('argentina', 'AR'),
+		('CO', 'colombia'),
+		('MX', 'mexico'),
+		('USA', 'estados unidos',),
+		('AR','argentina' ),
+		('PE','peru' ),
+		('FR','francia' ),
+		('ES','españa' ),
 	)
 	#Los modelos internamente tienen un id autoincremental
 	#Campo de tipo char que necesita el maximo de longitud de la cadena
