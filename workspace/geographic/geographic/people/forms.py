@@ -18,6 +18,11 @@ class RegisterFormModel(forms.ModelForm):
 	# Si definieramos aqui model lo tomaria como una variable y no como un modelo,
 	# por eso lo hacemos desde una clase
 
+	#Son casos muy específicos donde necesitas personalizar comportamientos o datos iniciales de un formulario dependiendo de lo que necesitas.
+	def __init__(self, fathers, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+		self.fields['father'].queryset = fathers
+
 	# El modelFrom determina si un campo es obligatorio por el atributo blank en el modelo, mas no el atributo null
 	class Meta:
 		model = Person

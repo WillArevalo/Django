@@ -5,8 +5,10 @@ from people.models import Person
 
 # Create your views here.
 def register(request):
+	#Filtra todas los personas que pueden ser padres que no tienen un hijo ya asignado y las pone en las opciones
+	fathers = Person.objects.filter(children__isnull=True)
 	#mandando request.POST podemos validar el form
-	form = RegisterFormModel(request.POST or None)
+	form = RegisterFormModel(fathers, request.POST or None)
 
 	if form.is_valid():
 		person = form.save()
